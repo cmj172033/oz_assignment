@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            background-color: rgb(250, 245, 224);
+            padding: 5px;
+        }
+        /* css에서 마우스 가져다대면 색깔 바뀌게 구현 */
+        /* span:hover {
+            background-color: pink;
+        } */
+    </style>
+</head>
+<body>
+    <span>마우스를 올려보세요.</span>
+
+    <script>
+        const span = document.querySelector("span");
+        
+        function changeBGColor(color) {
+            span.style.backgroundColor= color;
+            alert(color + "로 변경되었습니다.");
+        }
+
+        span.addEventListener("mouseover", () => changeBGColor("pink"))
+        span.addEventListener("mouseout", () => changeBGColor("rgb(250, 245, 224)"))
+    </script>
+</body>
+</html>
